@@ -18,7 +18,8 @@
       --line: #E3E1DB;
       --copper: #A8714A;
       --teal: #3D5A52;
-      --display: "Fraunces", Georgia, serif;
+      --display: Georgia, "Times New Roman", serif;
+      --accent-display: "Fraunces", Georgia, "Times New Roman", serif;
       --body: "KoPubWorldDotum", "KoPubWorld Dotum", "KoPub Dotum", "KoPub돋움체", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
     }
 
@@ -31,6 +32,8 @@
       color: var(--ink);
       font-family: var(--body);
       scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
     }
 
     body {
@@ -63,7 +66,7 @@
     .page {
       width: min(1180px, calc(100% - 40px));
       margin: 0 auto;
-      padding: 48px 0 40px;
+      padding: 46px 0 44px;
     }
 
     .shell {
@@ -77,6 +80,7 @@
       position: sticky;
       top: 32px;
       padding: 30px 0 0;
+      border-top: 2px solid var(--ink);
     }
 
     .kicker {
@@ -106,12 +110,21 @@
     }
 
     h1 {
-      max-width: 9ch;
-      margin-top: 18px;
+      max-width: 10.5ch;
+      margin-top: 20px;
       font-family: var(--display);
-      font-size: clamp(3.7rem, 8vw, 6.8rem);
-      font-weight: 650;
+      font-size: clamp(3.3rem, 7vw, 5.8rem);
+      font-weight: 700;
       letter-spacing: 0;
+      line-height: 0.98;
+      overflow-wrap: normal;
+      word-break: normal;
+      text-rendering: geometricPrecision;
+    }
+
+    .name-line {
+      display: block;
+      white-space: nowrap;
     }
 
     .subtitle {
@@ -172,16 +185,17 @@
 
     main {
       display: grid;
-      gap: 22px;
+      gap: 24px;
       padding: 34px 0 0;
     }
 
     .section {
       position: relative;
-      padding: 28px 30px 32px;
+      padding: 30px 32px 34px;
       border: 1px solid var(--line);
-      border-left: 4px solid var(--copper);
-      background: rgba(255, 255, 255, 0.72);
+      border-top-color: var(--ink);
+      border-left: 6px solid var(--copper);
+      background: var(--paper);
     }
 
     .section:nth-of-type(even) {
@@ -200,7 +214,7 @@
     }
 
     .section-heading h2 {
-      font-family: var(--display);
+      font-family: var(--accent-display);
       font-size: clamp(1.55rem, 2.3vw, 2.05rem);
       font-weight: 650;
     }
@@ -232,6 +246,10 @@
       padding: 24px;
       border: 1px solid var(--line);
       background: var(--panel);
+    }
+
+    .project + .project {
+      border-top-color: var(--copper);
     }
 
     .project:first-child {
@@ -399,7 +417,7 @@
 
       .page {
         width: min(100% - 28px, 680px);
-        padding-top: 28px;
+        padding-top: 26px;
       }
 
       .shell {
@@ -413,7 +431,8 @@
       }
 
       h1 {
-        max-width: 10ch;
+        max-width: none;
+        font-size: clamp(3.15rem, 12vw, 4.8rem);
       }
 
       .bridge {
@@ -443,7 +462,7 @@
       }
 
       h1 {
-        font-size: 3.35rem;
+        font-size: clamp(2.55rem, 13.2vw, 3.05rem);
       }
 
       .contact {
@@ -452,6 +471,7 @@
 
       .section {
         padding: 24px 18px 26px;
+        border-left-width: 5px;
       }
 
       .project {
@@ -552,7 +572,10 @@
     <div class="shell">
       <header class="identity" aria-label="Intro">
         <div class="kicker">Portfolio Resume</div>
-        <h1>Minsung 'Raymin' Jon</h1>
+        <h1 aria-label="Minsung 'Raymin' Jon">
+          <span class="name-line">Minsung</span>
+          <span class="name-line">'Raymin' Jon</span>
+        </h1>
         <p class="subtitle">Developer exploring inclusive systems that reduce information and communication gaps through computer science.</p>
         <ul class="contact" aria-label="Contact information">
           <li><span>Email</span><a href="mailto:muyahomin06@snu.ac.kr">muyahomin06@snu.ac.kr</a> / <a href="mailto:gwasuwontv@gmail.com">gwasuwontv@gmail.com</a></li>
