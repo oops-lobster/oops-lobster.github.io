@@ -76,6 +76,7 @@
     .identity {
       padding: 30px 0 42px;
       border-top: 2px solid var(--ink);
+      text-align: center;
     }
 
     .kicker {
@@ -124,7 +125,7 @@
 
     .subtitle {
       max-width: 40rem;
-      margin: 26px 0 0;
+      margin: 26px auto 0;
       color: var(--ink);
       font-size: clamp(1.02rem, 1.6vw, 1.18rem);
       font-weight: 500;
@@ -134,6 +135,7 @@
     .contact {
       display: flex;
       flex-wrap: wrap;
+      justify-content: center;
       gap: 14px 28px;
       margin: 34px 0 0;
       padding: 0;
@@ -157,7 +159,7 @@
       grid-template-columns: repeat(11, 1fr);
       gap: 7px;
       width: min(520px, 100%);
-      margin-top: 44px;
+      margin: 44px auto 0;
       padding-bottom: 8px;
       border-bottom: 1px solid var(--line);
     }
@@ -190,12 +192,13 @@
       padding: 30px 32px 34px;
       border: 1px solid var(--line);
       border-top-color: var(--ink);
-      border-left: 6px solid var(--copper);
+      border-bottom: 4px solid var(--copper);
       background: var(--paper);
+      text-align: center;
     }
 
     .section:nth-of-type(even) {
-      border-left-color: var(--teal);
+      border-bottom-color: var(--teal);
     }
 
     .section:first-child {
@@ -204,6 +207,7 @@
 
     .section-heading {
       display: flex;
+      justify-content: center;
       align-items: baseline;
       gap: 14px;
       margin-bottom: 22px;
@@ -217,7 +221,15 @@
 
     .section-heading::after {
       content: "";
-      flex: 1;
+      width: min(220px, 28%);
+      height: 1px;
+      background: var(--line);
+      transform: translateY(-2px);
+    }
+
+    .section-heading::before {
+      content: "";
+      width: min(220px, 28%);
       height: 1px;
       background: var(--line);
       transform: translateY(-2px);
@@ -225,7 +237,7 @@
 
     .profile {
       max-width: 70ch;
-      margin: 0;
+      margin: 0 auto;
       color: var(--ink);
       font-size: 1.02rem;
     }
@@ -236,9 +248,9 @@
     }
 
     .project {
-      display: grid;
-      grid-template-columns: minmax(150px, 0.46fr) minmax(0, 1fr);
-      gap: 24px;
+      display: block;
+      max-width: 780px;
+      margin: 0 auto;
       padding: 24px;
       border: 1px solid var(--line);
       background: var(--panel);
@@ -267,7 +279,8 @@
     }
 
     .project p {
-      margin: 0;
+      max-width: 58ch;
+      margin: 16px auto 0;
       color: var(--ink);
       line-height: 1.72;
     }
@@ -275,6 +288,7 @@
     .tags {
       display: flex;
       flex-wrap: wrap;
+      justify-content: center;
       gap: 8px;
       margin-top: 13px;
     }
@@ -303,9 +317,7 @@
     }
 
     .entry {
-      display: grid;
-      grid-template-columns: minmax(170px, 0.55fr) minmax(0, 1fr);
-      gap: 22px;
+      display: block;
       padding: 20px 0;
       border-top: 1px solid var(--line);
     }
@@ -329,8 +341,11 @@
     }
 
     .entry ul {
-      margin: 0;
+      display: inline-block;
+      max-width: 68ch;
+      margin: 14px auto 0;
       padding-left: 1.1rem;
+      text-align: left;
     }
 
     .entry li + li {
@@ -374,8 +389,9 @@
     }
 
     .awards li {
-      padding: 15px 0 15px 18px;
-      border-left: 2px solid var(--copper);
+      padding: 16px 18px;
+      border-top: 2px solid var(--copper);
+      background: var(--panel);
     }
 
     .awards strong {
@@ -463,13 +479,14 @@
 
       .contact {
         display: grid;
+        justify-content: center;
         gap: 9px;
         font-size: 0.9rem;
       }
 
       .section {
         padding: 24px 18px 26px;
-        border-left-width: 5px;
+        border-bottom-width: 4px;
       }
 
       .project {
@@ -477,12 +494,17 @@
       }
 
       .section-heading {
-        display: block;
+        display: flex;
+        gap: 10px;
       }
 
       .section-heading::after {
         display: block;
-        margin-top: 11px;
+        width: min(70px, 20%);
+      }
+
+      .section-heading::before {
+        width: min(70px, 20%);
       }
 
       .skill {
