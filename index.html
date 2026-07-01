@@ -313,18 +313,20 @@
 
     .split-list {
       display: grid;
-      gap: 20px;
+      gap: 14px;
+      max-width: 820px;
+      margin: 0 auto;
     }
 
     .entry {
       display: block;
-      padding: 20px 0;
-      border-top: 1px solid var(--line);
+      padding: 20px 22px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.58);
     }
 
     .entry:first-child {
-      border-top: 0;
-      padding-top: 0;
+      padding-top: 20px;
     }
 
     .entry-title {
@@ -343,7 +345,7 @@
     .entry ul {
       display: inline-block;
       max-width: 68ch;
-      margin: 14px auto 0;
+      margin: 13px auto 0;
       padding-left: 1.1rem;
       text-align: left;
     }
@@ -735,6 +737,17 @@
 
             <article class="entry">
               <div>
+                <div class="entry-title">SASA Mathematics Events</div>
+                <div class="entry-subtitle">Event Organizing Chair</div>
+                <div class="entry-time">High school leadership activity</div>
+              </div>
+              <ul>
+                <li>고등학교 수학 관련 행사 전반의 기획 및 운영을 총괄하며 행사 추진 위원장 역할 수행</li>
+              </ul>
+            </article>
+
+            <article class="entry">
+              <div>
                 <div class="entry-title">Private Tutoring &amp; Academic Coaching</div>
                 <div class="entry-subtitle">Academic Coach</div>
                 <div class="entry-time">Dec 2024 – Present</div>
@@ -772,6 +785,23 @@
                 <div>GPA: 4.20 / 4.3</div>
                 <div class="entry-time">Sejong, South Korea | Mar 2022 – Feb 2025</div>
               </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" aria-labelledby="service-title">
+          <div class="section-heading">
+            <h2 id="service-title">Military Service</h2>
+          </div>
+          <div class="split-list">
+            <article class="entry">
+              <div>
+                <div class="entry-title">Republic of Korea Army</div>
+                <div class="entry-subtitle">FDC (Fire Direction Center), Artillery Brigade, 8th Infantry Division</div>
+              </div>
+              <ul>
+                <li>Serving in the Fire Direction Center of the 8th Infantry Division Artillery Brigade.</li>
+              </ul>
             </article>
           </div>
         </section>
@@ -873,10 +903,10 @@
             <article class="entry">
               <div>
                 <div class="entry-title">Traditional Performance</div>
-                <div class="entry-subtitle">Haegeum and Nanta</div>
+                <div class="entry-subtitle">Korean traditional music and percussion performance</div>
               </div>
               <ul>
-                <li>Participated in haegeum and nanta performance activities.</li>
+                <li>Participated in haegeum (Korean traditional two-string instrument) and nanta (Korean non-verbal percussion performance) activities.</li>
               </ul>
             </article>
           </div>
