@@ -801,7 +801,7 @@
               <div>
                 <div class="entry-title">Republic of Korea Army</div>
                 <div class="entry-subtitle">FDC (Fire Direction Center), Artillery Brigade, 8th Maneuver Division</div>
-                <div class="entry-time">Expected discharge: February 2027</div>
+                <div class="entry-time" id="service-status" data-discharge-date="2027-02-17">Expected discharge: February 17, 2027</div>
               </div>
               <ul>
                 <li>Serving in the Fire Direction Center of the 8th Maneuver Division Artillery Brigade.</li>
@@ -927,5 +927,35 @@
       </main>
     </div>
   </div>
+  <script>
+    (() => {
+      const serviceStatus = document.getElementById("service-status");
+      if (!serviceStatus) return;
+
+      const [year, month, day] = serviceStatus.dataset.dischargeDate.split("-").map(Number);
+      const dischargeDate = Date.UTC(year, month - 1, day);
+      const todayInKorea = new Intl.DateTimeFormat("en-CA", {
+        timeZone: "Asia/Seoul",
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit"
+      }).formatToParts(new Date()).reduce((dateParts, part) => {
+        if (part.type !== "literal") {
+          dateParts[part.type] = Number(part.value);
+        }
+        return dateParts;
+      }, {});
+      const today = Date.UTC(todayInKorea.year, todayInKorea.month - 1, todayInKorea.day);
+      const daysUntilDischarge = Math.ceil((dischargeDate - today) / 86400000);
+
+      if (daysUntilDischarge > 0) {
+        serviceStatus.textContent = `Expected discharge: February 17, 2027 (D-${daysUntilDischarge})`;
+      } else if (daysUntilDischarge === 0) {
+        serviceStatus.textContent = "Expected discharge: February 17, 2027 (D-Day)";
+      } else {
+        serviceStatus.textContent = "Service completed: February 17, 2027";
+      }
+    })();
+  </script>
 </body>
 </html>
