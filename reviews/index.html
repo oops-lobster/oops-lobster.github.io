@@ -1,0 +1,13 @@
+---
+layout: default
+title: Paper Reviews
+description: 수어 인식·번역과 웨어러블 바이오센싱 논문을 프로젝트 관점에서 정리한 노트입니다.
+permalink: /reviews/
+---
+<section class="page-heading"><p class="eyebrow">Paper reviews</p><h1>논문에서 발견한<br><em>다음 질문들</em></h1><p>수어 인식·번역과 웨어러블 바이오센싱을 중심으로, 논문의 핵심 구조와 실제 구현에 주는 시사점을 기록합니다.</p></section>
+<section class="review-index" aria-label="논문 리뷰 목록">
+{% assign sorted_reviews = site.reviews | sort: 'order' %}{% for review in sorted_reviews %}
+  <article class="review-list-item"><a class="card-link" href="{{ review.url | relative_url }}" aria-label="{{ review.title }} 읽기"></a><div class="review-list-index">0{{ forloop.index }}</div><div class="review-list-body"><div class="card-topline"><span>{{ review.topic }}</span><span>{{ review.year }}</span></div><h2>{{ review.title }}</h2><p class="paper-title">{{ review.paper_title }}</p><p>{{ review.summary }}</p><ul class="tag-list" aria-label="태그">{% for tag in review.tags limit: 3 %}<li>{{ tag }}</li>{% endfor %}</ul></div><div class="review-list-arrow" aria-hidden="true">↗</div></article>
+{% endfor %}
+</section>
+<aside class="obsidian-note"><span class="wordmark-mark" aria-hidden="true">O</span><div><h2>Obsidian에서 쓰고, 여기서 공유합니다.</h2><p>원본 노트는 Obsidian에서 계속 관리합니다. 공개할 글만 이 사이트의 <code>_reviews</code> 폴더로 가져와 게시합니다.</p></div></aside>
