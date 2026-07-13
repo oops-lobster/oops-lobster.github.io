@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<article class="article-page">
+  <header class="article-header">
+    <a class="back-link" href="{{ '/reviews/' | relative_url }}">← Paper Reviews</a>
+    <div class="article-meta"><span>{{ page.topic }}</span><span>{{ page.year }}</span><span>{{ page.reading_time }} min read</span></div>
+    <h1>{{ page.title }}</h1>{% if page.paper_title %}<p class="paper-title">{{ page.paper_title }}</p>{% endif %}<p class="article-summary">{{ page.summary }}</p>
+    {% if page.tags %}<ul class="tag-list" aria-label="태그">{% for tag in page.tags %}<li>{{ tag }}</li>{% endfor %}</ul>{% endif %}
+  </header>
+  <div class="article-note"><p><strong>Reading note</strong> · Obsidian에서 정리한 개인 학습 기록입니다. 생성형 AI를 활용해 이해한 부분은 원문과 추가 자료를 통해 재검토가 필요할 수 있습니다.</p></div>
+  <div class="prose">{{ content }}</div>
+  <footer class="article-footer"><p>끝까지 읽어주셔서 감사합니다.</p><a class="text-link" href="{{ '/reviews/' | relative_url }}">다른 논문 리뷰 보기 <span aria-hidden="true">→</span></a></footer>
+</article>

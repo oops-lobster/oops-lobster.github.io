@@ -1,0 +1,25 @@
+title: Raymin Notes
+description: Minsung Raymin Jon의 연구 노트, 프로젝트, 이력서
+url: "https://oops-lobster.github.io"
+baseurl: ""
+lang: ko-KR
+timezone: Asia/Seoul
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+collections:
+  reviews:
+    output: true
+    permalink: /reviews/:name/
+defaults:
+  - scope:
+      path: ""
+      type: reviews
+    values:
+      layout: review
+exclude:
+  - README.md
+  - scripts
+  - Gemfile
+  - Gemfile.lock
