@@ -1,9 +1,13 @@
 ---
 title: "배터리 없이 피부 위에서 ECG를 읽는 방법"
+title_en: "Reading ECG from the Skin—Without a Battery"
+title_ja: "バッテリーなしで皮膚上のECGを読み取る"
 paper_title: "SkinECG: An Orthogonal Remote Powering Wearable Skin-like Sensor"
 topic: Wearable Bioelectronics
 year: 2026
 summary: "OPV, body-coupled powering, QRST feature extraction을 결합한 SkinECG의 구조를 이해하고 실제 의료 환경에서 검증해야 할 질문을 정리했습니다."
+summary_en: "A closer look at SkinECG’s combination of OPV, body-coupled powering, and QRST extraction—and the questions that remain for clinical use."
+summary_ja: "OPV、人体結合給電、QRST抽出を組み合わせたSkinECGの仕組みと、臨床応用に向けて残る課題を整理しました。"
 reading_time: 16
 order: 3
 tags:

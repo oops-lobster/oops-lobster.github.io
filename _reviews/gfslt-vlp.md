@@ -1,9 +1,13 @@
 ---
 title: "Gloss 없이 수어를 번역할 수 있을까"
+title_en: "Can Sign Language Translation Work Without Glosses?"
+title_ja: "グロスなしで手話翻訳は可能か"
 paper_title: "Gloss-free Sign Language Translation: Improving from Visual-Language Pretraining"
 topic: Sign Language Translation
 year: 2023
 summary: "시각-언어 사전학습으로 gloss annotation 없이 수어 영상과 자연어 문장을 연결하는 방법을 살펴보고, 손말첫걸음의 교육용 판정 시스템으로 확장할 지점을 정리했습니다."
+summary_en: "A study of gloss-free sign language translation through visual-language pretraining, with practical connections to an educational sign-assessment system."
+summary_ja: "視覚言語事前学習によるグロスフリー手話翻訳を読み解き、教育向け手話評価システムへの応用を考察しました。"
 reading_time: 18
 order: 1
 tags:
