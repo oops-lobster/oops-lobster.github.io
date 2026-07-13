@@ -1,28 +1,53 @@
 ---
 layout: default
 title: Home
-description: Minsung Raymin Jon의 연구 노트, 프로젝트, 이력서를 모은 개인 블로그입니다.
+description: Research portfolio, paper reviews, projects, and academic resume of Minsung “Raymin” Jon.
 ---
 
-<section class="hero" aria-labelledby="hero-title">
-  <p class="eyebrow">Research notes · Projects · Resume</p>
-  <h1 id="hero-title">기술이 사람에게<br><em>닿는 방식</em>을 연구합니다.</h1>
-  <p class="hero-copy">수어 접근성, 웨어러블 센싱, 온디바이스 머신러닝을 공부하고 만듭니다. 논문에서 배운 개념을 실제 문제와 연결해 기록합니다.</p>
-  <div class="hero-actions">
-    <a class="button button-primary" href="{{ '/reviews/' | relative_url }}">논문 리뷰 읽기 <span aria-hidden="true">↗</span></a>
-    <a class="button" href="{{ '/resume/' | relative_url }}">이력서 보기</a>
+<section class="hero hero-carousel" role="region" aria-roledescription="carousel" aria-label="한국어와 영어 소개" data-hero-carousel>
+  <div class="hero-stage">
+    <article class="hero-slide is-active" role="group" aria-roledescription="slide" aria-label="1 of 2" aria-hidden="false" data-hero-slide lang="ko">
+      <p class="eyebrow">Research notes · Projects · Resume</p>
+      <h1 id="hero-title-ko">기술이 사람에게<br><em>닿는 방식</em>을 연구합니다.</h1>
+      <p class="hero-copy">수어 접근성, 웨어러블 센싱, 온디바이스 머신러닝을 공부하고 만듭니다. 논문에서 배운 개념을 실제 문제와 연결해 기록합니다.</p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="{{ '/reviews/' | relative_url }}">논문 리뷰 읽기 <span aria-hidden="true">↗</span></a>
+        <a class="button" href="{{ '/resume/' | relative_url }}">이력서 보기</a>
+      </div>
+    </article>
+    <article class="hero-slide hero-slide-en" role="group" aria-roledescription="slide" aria-label="2 of 2" aria-hidden="true" data-hero-slide lang="en" inert>
+      <p class="eyebrow">Academic portfolio · Research · Engineering</p>
+      <h1 id="hero-title-en">From research questions to<br><em>systems that work for more people.</em></h1>
+      <p class="hero-copy">I am an Electrical and Computer Engineering student at Seoul National University, exploring sign language accessibility, wearable sensing, and on-device intelligence. I turn what I learn into working prototypes and documented research notes.</p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="{{ '/reviews/' | relative_url }}">Explore research notes <span aria-hidden="true">↗</span></a>
+        <a class="button" href="{{ '/resume/' | relative_url }}">View academic resume</a>
+      </div>
+    </article>
+  </div>
+  <div class="carousel-controls" aria-label="소개 슬라이드 제어">
+    <div class="carousel-count"><span data-slide-current>01</span><span aria-hidden="true"> / </span><span>02</span></div>
+    <div class="carousel-dots" role="group" aria-label="슬라이드 선택">
+      <button class="carousel-dot is-active" type="button" aria-label="한국어 소개 보기" aria-pressed="true" data-slide-to="0"><span>KOR</span></button>
+      <button class="carousel-dot" type="button" aria-label="영어 소개 보기" aria-pressed="false" data-slide-to="1"><span>ENG</span></button>
+    </div>
+    <div class="carousel-buttons">
+      <button type="button" aria-label="이전 소개" data-slide-prev><span aria-hidden="true">←</span></button>
+      <button type="button" aria-label="자동 전환 일시정지" aria-pressed="false" data-slide-pause><span data-pause-label>Pause</span></button>
+      <button type="button" aria-label="다음 소개" data-slide-next><span aria-hidden="true">→</span></button>
+    </div>
   </div>
   <dl class="hero-facts" aria-label="Profile summary">
     <div><dt>Based in</dt><dd>Seoul, Korea</dd></div>
-    <div><dt>Studying</dt><dd>Electrical &amp; Computer Engineering</dd></div>
+    <div><dt>Studying</dt><dd>SNU · Electrical &amp; Computer Engineering</dd></div>
     <div><dt>Current focus</dt><dd>Assistive &amp; wearable systems</dd></div>
   </dl>
 </section>
 
 <section class="home-section" aria-labelledby="latest-title">
   <div class="section-intro">
-    <div><p class="eyebrow">Paper reviews</p><h2 id="latest-title">읽고, 이해하고,<br>다시 연결한 기록</h2></div>
-    <p>논문의 주장과 구조를 정리하는 데서 멈추지 않고, 진행 중인 프로젝트와 다음 질문으로 연결합니다.</p>
+    <div><p class="eyebrow">Paper reviews</p><h2 id="latest-title"><span class="home-copy" data-home-lang="ko">읽고, 이해하고,<br>다시 연결한 기록</span><span class="home-copy" data-home-lang="en" lang="en" hidden>Notes that connect<br>papers to practice.</span></h2></div>
+    <p><span class="home-copy" data-home-lang="ko">논문의 주장과 구조를 정리하는 데서 멈추지 않고, 진행 중인 프로젝트와 다음 질문으로 연결합니다.</span><span class="home-copy" data-home-lang="en" lang="en" hidden>I read beyond the abstract—tracing each paper’s argument, testing its implications, and connecting it to the systems I want to build.</span></p>
   </div>
   <div class="review-grid">
     {% assign sorted_reviews = site.reviews | sort: 'order' %}
@@ -30,27 +55,27 @@ description: Minsung Raymin Jon의 연구 노트, 프로젝트, 이력서를 모
       <article class="review-card">
         <a class="card-link" href="{{ review.url | relative_url }}" aria-label="{{ review.title }} 읽기"></a>
         <div class="card-topline"><span>{{ review.topic }}</span><span>{{ review.year }}</span></div>
-        <h3>{{ review.title }}</h3><p>{{ review.summary }}</p>
+        <h3><span class="home-copy" data-home-lang="ko">{{ review.title }}</span><span class="home-copy" data-home-lang="en" lang="en" hidden>{{ review.title_en | default: review.title }}</span></h3><p><span class="home-copy" data-home-lang="ko">{{ review.summary }}</span><span class="home-copy" data-home-lang="en" lang="en" hidden>{{ review.summary_en | default: review.summary }}</span></p>
         <div class="card-footer"><span>{{ review.reading_time }} min read</span><span aria-hidden="true">↗</span></div>
       </article>
     {% endfor %}
   </div>
-  <a class="text-link" href="{{ '/reviews/' | relative_url }}">모든 논문 리뷰 보기 <span aria-hidden="true">→</span></a>
+  <a class="text-link" href="{{ '/reviews/' | relative_url }}"><span data-home-lang="ko">모든 논문 리뷰 보기</span><span data-home-lang="en" lang="en" hidden>Browse all paper reviews</span> <span aria-hidden="true">→</span></a>
 </section>
 
 <section class="home-section projects-section" aria-labelledby="projects-title">
   <div class="section-intro">
-    <div><p class="eyebrow">Selected projects</p><h2 id="projects-title">배운 것을<br>제품으로 옮깁니다.</h2></div>
-    <p>언어와 정보의 장벽을 낮추는 실험을 작게 만들고, 실제 사용자에게 닿게 합니다.</p>
+    <div><p class="eyebrow">Selected projects</p><h2 id="projects-title"><span class="home-copy" data-home-lang="ko">배운 것을<br>제품으로 옮깁니다.</span><span class="home-copy" data-home-lang="en" lang="en" hidden>Turning what I learn<br>into working systems.</span></h2></div>
+    <p><span class="home-copy" data-home-lang="ko">언어와 정보의 장벽을 낮추는 실험을 작게 만들고, 실제 사용자에게 닿게 합니다.</span><span class="home-copy" data-home-lang="en" lang="en" hidden>I build small, working experiments that lower barriers to language, learning, and information—and put them in front of real users.</span></p>
   </div>
   <div class="project-list">
-    <article class="project-row"><div class="project-number">01</div><div><p class="project-meta">Korean Sign Language · Live</p><h3>Sonmalgwan <span>손말관</span></h3><p>한국어 텍스트와 음성을 한국수어사전 영상 시퀀스로 바꾸는 접근성 프로토타입입니다.</p></div><a href="https://handsigns.vercel.app" aria-label="Sonmalgwan live project 열기">↗</a></article>
-    <article class="project-row"><div class="project-number">02</div><div><p class="project-meta">KSL Learning · Live</p><h3>Handsigns First Step <span>손말첫걸음</span></h3><p>카메라 기반 손 인식을 활용해 지문자를 단계별로 연습하는 한국수어 입문 학습 서비스입니다.</p></div><a href="https://handsignsfirststep.vercel.app" aria-label="Handsigns First Step live project 열기">↗</a></article>
-    <article class="project-row"><div class="project-number">03</div><div><p class="project-meta">Learning Support · In development</p><h3>Learning Mate</h3><p>학습 계획, 모의고사 피드백, 개인화 루틴을 연결하는 고등학생 학습 지원 MVP입니다.</p></div><a href="https://github.com/cathyahn4u/running-mate" aria-label="Learning Mate repository 열기">↗</a></article>
+    <article class="project-row"><div class="project-number">01</div><div><p class="project-meta">Korean Sign Language · Live</p><h3>Sonmalgwan <span>손말관</span></h3><p><span class="home-copy" data-home-lang="ko">한국어 텍스트와 음성을 한국수어사전 영상 시퀀스로 바꾸는 접근성 프로토타입입니다.</span><span class="home-copy" data-home-lang="en" lang="en" hidden>An accessibility prototype that converts Korean text and speech into sequences of Korean Sign Language dictionary videos.</span></p></div><a href="https://handsigns.vercel.app" aria-label="Open the Sonmalgwan live project">↗</a></article>
+    <article class="project-row"><div class="project-number">02</div><div><p class="project-meta">KSL Learning · Live</p><h3>Handsigns First Step <span>손말첫걸음</span></h3><p><span class="home-copy" data-home-lang="ko">카메라 기반 손 인식을 활용해 지문자를 단계별로 연습하는 한국수어 입문 학습 서비스입니다.</span><span class="home-copy" data-home-lang="en" lang="en" hidden>A beginner-focused KSL learning service for step-by-step fingerspelling practice with browser-based hand recognition.</span></p></div><a href="https://handsignsfirststep.vercel.app" aria-label="Open the Handsigns First Step live project">↗</a></article>
+    <article class="project-row"><div class="project-number">03</div><div><p class="project-meta">Learning Support · In development</p><h3>Learning Mate</h3><p><span class="home-copy" data-home-lang="ko">학습 계획, 모의고사 피드백, 개인화 루틴을 연결하는 고등학생 학습 지원 MVP입니다.</span><span class="home-copy" data-home-lang="en" lang="en" hidden>A study-support MVP connecting session planning, mock-exam feedback, and personalized routines for high-school students.</span></p></div><a href="https://github.com/cathyahn4u/running-mate" aria-label="Open the Learning Mate repository">↗</a></article>
   </div>
 </section>
 
 <section class="home-section about-strip" aria-labelledby="about-title">
-  <div><p class="eyebrow">About Raymin</p><h2 id="about-title">포용적인 기술 시스템을 탐구하는 개발자입니다.</h2></div>
-  <div><p>빠른 기술 변화 속에서 소외될 수 있는 사람들의 정보·소통 격차를 줄이는 데 관심이 있습니다. 서울대학교 전기·정보공학부에서 공부하며 수어 접근성, 바이오메디컬 회로, 웨어러블 센싱을 탐구하고 있습니다.</p><a class="text-link" href="{{ '/resume/' | relative_url }}">전체 이력과 경험 보기 <span aria-hidden="true">→</span></a></div>
+  <div><p class="eyebrow">About Raymin</p><h2 id="about-title"><span class="home-copy" data-home-lang="ko">포용적인 기술 시스템을 탐구하는 개발자입니다.</span><span class="home-copy" data-home-lang="en" lang="en" hidden>An engineer interested in who technology reaches—and who it misses.</span></h2></div>
+  <div><p><span class="home-copy" data-home-lang="ko">빠른 기술 변화 속에서 소외될 수 있는 사람들의 정보·소통 격차를 줄이는 데 관심이 있습니다. 서울대학교 전기·정보공학부에서 공부하며 수어 접근성, 바이오메디컬 회로, 웨어러블 센싱을 탐구하고 있습니다.</span><span class="home-copy" data-home-lang="en" lang="en" hidden>I study Electrical and Computer Engineering at Seoul National University. My work explores how accessible computing, biomedical circuits, and wearable sensing can make technological progress more useful to a wider range of people.</span></p><a class="text-link" href="{{ '/resume/' | relative_url }}"><span data-home-lang="ko">전체 이력과 경험 보기</span><span data-home-lang="en" lang="en" hidden>View education, experience, and honors</span> <span aria-hidden="true">→</span></a></div>
 </section>

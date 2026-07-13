@@ -1,9 +1,11 @@
 ---
 title: "수어 교육 플랫폼은 동작을 어떻게 평가할까"
+title_en: "How Can a Learning Platform Evaluate Signing?"
 paper_title: "Greek Sign Language Recognition for an Education Platform"
 topic: Sign Language Recognition
 year: 2025
 summary: "그리스 수어 교육 플랫폼 SL-ReDu의 웹캠 기반 인식 모듈을 분석하고, signer-independent 평가와 교육적 피드백을 손말첫걸음에 적용하는 방법을 정리했습니다."
+summary_en: "An analysis of SL-ReDu’s webcam-based recognition module and what signer-independent evaluation can teach us about educational feedback."
 reading_time: 13
 order: 2
 tags:

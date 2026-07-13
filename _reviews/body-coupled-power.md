@@ -1,9 +1,11 @@
 ---
 title: "몸을 전력이 흐르는 매질로 바꾸기"
+title_en: "Turning the Human Body into a Medium for Power"
 paper_title: "Body-Coupled Power Transmission and Energy Harvesting"
 topic: Wearable Power Systems
 year: 2021
 summary: "몸을 RF 전파의 장애물이 아니라 전력 전달 매질로 활용하는 발상을 살펴보고, SkinECG와 adaptive hybrid-powered wearable로 이어지는 아이디어를 정리했습니다."
+summary_en: "How the body can become a medium for power transmission rather than an RF obstacle, and how that idea extends toward adaptive wearable systems."
 reading_time: 15
 order: 4
 tags:
