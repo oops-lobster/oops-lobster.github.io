@@ -52,8 +52,8 @@
     });
 
     current = target;
-    const language = slides[target].lang === "en" ? "en" : "ko";
-    document.documentElement.lang = language === "en" ? "en" : "ko-KR";
+    const language = ["ko", "en", "ja"].includes(slides[target].lang) ? slides[target].lang : "ko";
+    document.documentElement.lang = language === "ko" ? "ko-KR" : language;
     localizedCopy.forEach((element) => {
       element.hidden = element.dataset.homeLang !== language;
     });

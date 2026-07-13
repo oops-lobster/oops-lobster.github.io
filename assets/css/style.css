@@ -51,6 +51,7 @@ a:focus-visible { outline: 3px solid var(--color-ring); outline-offset: 4px; bor
 .hero-slide { grid-area: 1 / 1; min-width: 0; opacity: 0; visibility: hidden; transform: translateX(28px); transition: opacity 280ms ease-out, transform 280ms ease-out, visibility 280ms; }
 .hero-slide.is-active { opacity: 1; visibility: visible; transform: translateX(0); }
 .hero-slide-en h1 { max-width: 1120px; }
+.hero-slide-ja h1 { max-width: 1120px; font-size: clamp(2.8rem, 7.2vw, 6.6rem); line-height: 1.08; }
 .hero h1, .page-heading h1, .resume-hero h1 { max-width: 1050px; margin: 0; font-family: var(--font-display); font-size: clamp(3rem, 8.2vw, 7.5rem); font-weight: 500; letter-spacing: -.06em; line-height: .98; }
 em { color: var(--color-accent); font-style: normal; }
 .hero-copy { max-width: 680px; margin: var(--space-12) 0 0; color: var(--color-secondary); font-size: clamp(1.05rem, 1.7vw, 1.35rem); line-height: 1.75; }
@@ -213,6 +214,7 @@ em { color: var(--color-accent); font-style: normal; }
   .wordmark-mark { width: 32px; height: 32px; }
   .hero h1 { font-size: 2.75rem; }
   .hero-slide-en h1 { font-size: 2.45rem; }
+  .hero-slide-ja h1 { font-size: 2.3rem; }
   .review-card { padding: var(--space-6); }
   .project-row { grid-template-columns: 28px 1fr; }
   .project-row > a { grid-column: 2; }
