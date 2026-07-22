@@ -1,6 +1,17 @@
 ---
 layout: default
 ---
+{% if page.math %}
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)']],
+      displayMath: [['\\[', '\\]']]
+    }
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+{% endif %}
 <article class="article-page">
   <header class="article-header">
     <a class="back-link" href="{{ '/reviews/' | relative_url }}">← Paper Reviews</a>

@@ -9,7 +9,7 @@ summary: "OPV, body-coupled powering, QRST feature extraction을 결합한 SkinE
 summary_en: "A closer look at SkinECG’s combination of OPV, body-coupled powering, and QRST extraction—and the questions that remain for clinical use."
 summary_ja: "OPV、人体結合給電、QRST抽出を組み合わせたSkinECGの仕組みと、臨床応用に向けて残る課題を整理しました。"
 reading_time: 16
-order: 3
+order: 4
 tags:
   - SkinECG
   - Body-Coupled Power
