@@ -9,7 +9,7 @@ summary: "몸을 RF 전파의 장애물이 아니라 전력 전달 매질로 활
 summary_en: "How the body can become a medium for power transmission rather than an RF obstacle, and how that idea extends toward adaptive wearable systems."
 summary_ja: "人体をRFの障害物ではなく電力伝送の媒体として捉える発想と、適応型ウェアラブルシステムへの展開を考察しました。"
 reading_time: 15
-order: 4
+order: 5
 tags:
   - Body-Coupled Power
   - Energy Harvesting
