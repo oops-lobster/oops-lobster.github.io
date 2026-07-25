@@ -26,3 +26,10 @@ tags:
 파일명은 URL이 되므로 `lowercase-kebab-case.md` 형식을 권장합니다. Obsidian의 `[[위키 링크]]`와 `![[이미지 임베드]]`는 기본 Jekyll에서 변환되지 않으므로 일반 Markdown 링크와 이미지 문법을 사용하세요.
 
 현재 리뷰 파일은 제공받은 Obsidian 노트의 복사본입니다. 원본 Obsidian 파일은 수정하지 않습니다.
+
+## Research 페이지 관리
+
+`/research/` 페이지의 대표 연구, 예정 연구, 공통 연구 방법은
+`_data/research.yml`에서 관리합니다. 실제 보고서나 분석 페이지가 준비되기
+전에는 `report_url`과 `analysis_url`을 비워 두면 링크 대신 공개 예정 상태가
+표시됩니다. 검증되지 않은 결과나 임시 URL은 추가하지 않습니다.

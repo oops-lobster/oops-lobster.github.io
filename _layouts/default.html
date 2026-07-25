@@ -8,14 +8,15 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&amp;family=Noto+Sans+KR:wght@400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
   <script src="{{ '/assets/js/hero-carousel.js' | relative_url }}" defer></script>
+  {% if page.url contains '/research/' %}<script src="{{ '/assets/js/research-page.js' | relative_url }}" defer></script>{% endif %}
 </head>
 <body>
   <a class="skip-link" href="#content">본문으로 건너뛰기</a>
   <header class="site-header">
     <a class="wordmark" href="{{ '/' | relative_url }}" aria-label="Raymin Notes 홈"><span class="wordmark-mark" aria-hidden="true">R</span><span>Raymin Notes</span></a>
-    <nav aria-label="주요 메뉴"><a href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>Home</a><a href="{{ '/reviews/' | relative_url }}"{% if page.url contains '/reviews/' %} aria-current="page"{% endif %}>Paper Reviews</a><a href="{{ '/resume/' | relative_url }}"{% if page.url contains '/resume/' %} aria-current="page"{% endif %}>Resume</a></nav>
+    <nav aria-label="주요 메뉴"><a href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>Home</a><a href="{{ '/reviews/' | relative_url }}"{% if page.url contains '/reviews/' %} aria-current="page"{% endif %}>Paper Reviews</a><a href="{{ '/research/' | relative_url }}" data-research-nav{% if page.url contains '/research/' %} aria-current="page"{% endif %}>Research</a><a href="{{ '/resume/' | relative_url }}"{% if page.url contains '/resume/' %} aria-current="page"{% endif %}>Resume</a></nav>
   </header>
   <main id="content">{{ content }}</main>
-  <footer class="site-footer"><div><span class="footer-title">Raymin Notes</span><p>Questions become notes.<br>Notes become things.</p></div><div class="footer-links"><a href="mailto:muyahomin06@snu.ac.kr">Email</a><a href="https://github.com/oops-lobster">GitHub</a><a href="{{ '/reviews/' | relative_url }}">Paper Reviews</a></div><p class="copyright">© {{ 'now' | date: '%Y' }} Minsung “Raymin” Jon</p></footer>
+  <footer class="site-footer"><div><span class="footer-title">Raymin Notes</span><p>Questions become notes.<br>Notes become things.</p></div><div class="footer-links"><a href="mailto:muyahomin06@snu.ac.kr">Email</a><a href="https://github.com/oops-lobster">GitHub</a><a href="{{ '/research/' | relative_url }}">Research</a><a href="{{ '/reviews/' | relative_url }}">Paper Reviews</a></div><p class="copyright">© {{ 'now' | date: '%Y' }} Minsung “Raymin” Jon</p></footer>
 </body>
 </html>
