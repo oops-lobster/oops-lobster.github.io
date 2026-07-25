@@ -8,149 +8,57 @@ featured:
     type_en: Graduation Research
     type_ko: 졸업연구
     title_en: A Study on Indian Poker Bluffing Strategies Using Probabilistic Methods
-    title_ko: 확률론적 방법을 활용한 블러핑 고려 인디언포커 연구
-    summary_en: Reduced a 20-card Indian Poker game to a three-card AKQ abstraction and examined mixed bluffing, checking, and bluff-catching strategies using expected-value indifference conditions.
-    summary_ko: 20장 인디언포커를 A·K·Q 3장 게임으로 추상화하고, 기대값 무차별 조건을 이용해 블러프·체크·블러프 캐치의 혼합전략을 분석했습니다.
+    title_ko: 확률론적 방법을 활용한 블러핑 고려 인디언 포커 연구
+    summary_en: Starting from the ordinary 20-card game, this report builds a two-player AKQ abstraction and uses probability and expected value to examine bluffing, bluff-catching, and deceptive checking.
+    summary_ko: 일반적인 20장 게임에서 출발해 2인 A·K·Q 축약모형을 만들고, 확률과 기대값으로 블러프·블러프 캐치·기만적 체크를 분석한 보고서입니다.
     highlights_en:
-      - Converted the 20-card game into an AKQ abstraction
-      - Examined how deterministic betting becomes exploitable
-      - Derived card-dependent mixes of bluffs, checks, and raises
-      - Analyzed bluff-catching thresholds
-      - Proposed a deceptive checking strategy
+      - Examines ordinary 20-card Indian Poker before reducing it to an AKQ model
+      - Shows how deterministic betting can reveal information and become exploitable
+      - Derives conditions for first-player bluffing and second-player bluff-catching
+      - Compares first-player-only and two-player bluffing, including FAKE CHECK
+      - Summarizes mixed strategies within the stated simplified model
     highlights_ko:
-      - 20장 게임을 A·K·Q 축약모형으로 변환
-      - 결정론적 베팅의 피착취성 분석
-      - 카드별 블러프·체크·레이즈 혼합전략 도출
-      - 블러프 캐치 임계조건 분석
-      - 페이크 체크 전략 제안
+      - 일반적인 20장 인디언 포커를 살핀 뒤 A·K·Q 모형으로 축약
+      - 결정론적 베팅이 정보를 드러내 피착취될 수 있음을 분석
+      - 선공의 블러프와 후공의 블러프 캐치 조건을 기대값으로 도출
+      - 선공만 블러프하는 경우와 양쪽 모두 블러프하는 경우 및 FAKE CHECK 비교
+      - 명시한 축약모형 안에서 혼합전략을 정리
     methods:
       - Expected Value
       - Probability
       - Mixed Strategy
       - Game Abstraction
-    report_url:
+    report_url: /assets/reports/indian-poker-bluffing-strategies-2023.pdf
     analysis_url:
-    link_state_en: Report coming soon
-    link_state_ko: 보고서 공개 예정
-
-  - slug: mafia42
-    game: Mafia42
-    status_key: in-progress
-    status_en: In Progress
-    status_ko: 진행 중
-    type_en: Independent Research
-    type_ko: 독립 연구
-    title_en: Strategic Counterclaims in Mafia42 Classic Eight-Player Mode
-    title_ko: 마피아42 클래식 8인판의 직업 사칭과 대응 전략 분석
-    summary_en: A computational study of claim, counterclaim, and elimination strategies in Mafia42’s classic eight-player mode, focusing on player heuristics such as 맞경, 맞의, 맞경크, and 찍경크.
-    summary_ko: 마피아42 클래식 8인판에서 맞경·맞의·맞경크·찍경크와 같은 경험적 전략을 주장, 맞주장, 처형 선택의 계산 문제로 바꾸는 연구입니다.
-    questions_en:
-      - When is 맞경크 preferable to 찍경크 after competing police claims?
-      - How should role claims and investigation results update each player’s posterior probability?
-      - Is eliminating the most suspicious player always the same as maximizing the citizen team’s win probability?
-      - How does a third faction change the value of confirmed roles and faction information?
-    questions_ko:
-      - 맞경 상황에서 맞경크와 찍경크 중 어느 전략이 유리한가?
-      - 직업 주장과 조사 결과는 각 플레이어의 사후확률을 어떻게 바꾸는가?
-      - 가장 의심스러운 플레이어를 처형하는 선택과 시민팀 승률을 최대화하는 선택은 항상 같은가?
-      - 교주판 등 제3세력은 확정직과 진영 정보의 가치를 어떻게 바꾸는가?
-    methods:
-      - Bayesian Inference
-      - State-Transition Modeling
-      - Monte Carlo Simulation
-      - Imperfect-Information Games
-    report_url:
-    analysis_url:
-    link_state_en: Study in progress
-    link_state_ko: 연구 진행 중
-
-upcoming:
-  - slug: coup
-    game: Coup
-    title_en: The First-Turn Duke Problem
-    title_ko: 첫 턴 공작 선언 문제
-    status_key: planned
-    status_en: Planned
-    status_ko: 계획
-    question_en: When is claiming Duke on the first turn optimal, and at what posterior probability should another player challenge the claim?
-    question_ko: 실제 공작 보유 여부, 플레이어 수, 과거 행동과 상대의 도전 성향에 따라 첫 턴 공작 선언과 도전의 균형 빈도는 어떻게 달라지는가?
-    methods:
-      - Bayesian Games
-      - Mixed Strategies
-      - Challenge Thresholds
-
-  - slug: da-vinci-code
-    game: Da Vinci Code
-    title_en: Initial Color Composition
-    title_ko: 시작 타일 색 구성
-    status_key: planned
-    status_en: Planned
-    status_ko: 계획
-    question_en: In a two-player game, how do initial tile-color compositions such as 4:0, 3:1, and 2:2 affect information exposure, guessing accuracy, and expected win rate?
-    question_ko: 2인전에서 시작 패를 단색 4개로 구성하는 것과 2:2로 구성하는 것 중 어느 쪽이 상대에게 더 적은 정보를 노출하고 높은 승률을 만드는가?
-    methods:
-      - Combinatorics
-      - Bayesian Updating
-      - Information Gain
-      - Simulation
-
-  - slug: skull
-    game: Skull
-    title_en: Hidden Hazard and Bidding
-    title_ko: 숨겨진 위험과 입찰
-    status_key: planned
-    status_en: Planned
-    status_ko: 계획
-    question_en: How should skull-placement frequency and bidding behavior change according to player count, public history, and estimated opponent tendencies?
-    question_ko: 플레이어 수와 공개된 행동 이력에 따라 스컬 배치 빈도와 입찰 임계값을 어떻게 조정해야 하는가?
-    methods:
-      - Mixed Strategies
-      - Opponent Modeling
-      - Bayesian Updating
-
-  - slug: cockroach-poker
-    game: Cockroach Poker
-    title_en: Claim, Catch, or Pass
-    title_ko: 선언, 판정, 또는 전달
-    status_key: exploratory
-    status_en: Exploratory
-    status_ko: 탐색 단계
-    question_en: How should a player choose between truthful claims, false claims, direct judgments, passing, and target selection while minimizing their probability of becoming the losing player?
-    question_ko: 카드 종류별 누적 위험과 상대의 거짓말 이력을 고려할 때 선언, 판정, 전달, 표적 선택의 최적 전략은 무엇인가?
-    methods:
-      - Multiplayer Bluffing
-      - Belief Modeling
-      - Monte Carlo Simulation
-      - Approximate Equilibrium
 
 method:
   - number: "01"
     title_en: Observe
     title_ko: 관찰
-    description_en: Find recurring player heuristics and unresolved strategic debates.
-    description_ko: 플레이어들이 반복적으로 논쟁하는 경험칙을 발견합니다.
+    description_en: Identify how deterministic betting leaks private information.
+    description_ko: 결정론적 베팅이 비공개 정보를 드러내는 문제를 관찰합니다.
   - number: "02"
     title_en: Formalize
     title_ko: 정식화
-    description_en: Define rules, information sets, actions, payoffs, and the scope of analysis.
-    description_ko: 규칙, 정보집합, 행동, 보수와 분석 범위를 정의합니다.
+    description_en: Define the rules, actions, payoffs, and assumptions used in the report.
+    description_ko: 보고서에서 사용할 규칙, 행동, 보수와 가정을 정의합니다.
   - number: "03"
-    title_en: Model
-    title_ko: 모형화
-    description_en: Build reduced models with probability, Bayesian inference, and game theory.
-    description_ko: 확률론, 베이즈 추론과 게임이론으로 축약모형을 구성합니다.
+    title_en: Abstract
+    title_ko: 추상화
+    description_en: Reduce the game to a two-player AKQ model without replacement.
+    description_ko: 비복원 추출을 따르는 2인 A·K·Q 모형으로 게임을 축약합니다.
   - number: "04"
-    title_en: Compute
-    title_ko: 계산
-    description_en: Run exact calculations, dynamic programming, CFR, or simulation as appropriate.
-    description_ko: 정확 계산, 동적계획법, CFR 또는 시뮬레이션을 실행합니다.
+    title_en: Derive
+    title_ko: 도출
+    description_en: Use expected-value inequalities to derive mixed bluffing frequencies.
+    description_ko: 기대값 부등식으로 혼합 블러프 빈도를 도출합니다.
   - number: "05"
-    title_en: Validate
-    title_ko: 검증
-    description_en: Test sensitivity, best responses, robustness, and exploitability.
-    description_ko: 민감도, 최적 반응, 강건성과 피착취성을 검토합니다.
+    title_en: Compare
+    title_ko: 비교
+    description_en: Compare first-player bluffing, two-sided bluffing, bluff-catching, and FAKE CHECK.
+    description_ko: 선공 블러프, 양측 블러프, 블러프 캐치와 FAKE CHECK를 비교합니다.
   - number: "06"
-    title_en: Explain
-    title_ko: 설명
-    description_en: Publish technical reports, code, visualizations, and player-facing explanations.
-    description_ko: 기술보고서, 코드, 시각화와 플레이어용 해설로 공개합니다.
+    title_en: Document
+    title_ko: 기록
+    description_en: State the results together with the model's assumptions and limitations.
+    description_ko: 결과와 함께 모형의 가정과 한계를 명시합니다.
