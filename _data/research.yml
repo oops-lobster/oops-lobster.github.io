@@ -1,4 +1,46 @@
 featured:
+  - slug: davinci-code-all-white-paradox
+    game: Da Vinci Code / Coda
+    status_key: in-progress
+    status_en: Research in Progress
+    status_ko: 연구 진행 중
+    year: 2026
+    version: v2.0
+    type_en: Ongoing Technical Research
+    type_ko: 진행 중 기술연구
+    title_en: Is an All-White Opening Really Disadvantageous in Two-Player Da Vinci Code?
+    title_ko: 다빈치코드 2인전에서 흰색 4장 오프닝은 정말 불리한가?
+    summary_en: An ongoing computational study of initial color composition, pooling signals, joker placement, and first-exchange value. Version 2.0 compares 2+2 and all-white openings under a common baseline and evaluates a separate signal-aware policy over 180,180 exactly enumerated microstates.
+    summary_ko: 초기 색 구성, 풀링 신호, 조커 배치와 첫 공방 가치를 분석하는 진행 중 계산 연구입니다. v2.0에서는 공통 기준선으로 2+2와 흰색 4장을 비교하고, 별도의 신호 고려 정책을 180,180개 미시상태의 정확 열거로 평가했습니다.
+    details_title_en: Current results and next steps
+    details_title_ko: 현재 결과와 확장 방향
+    highlights_en:
+      - Isolates one attack-counterattack exchange rather than claiming a full-game solution
+      - Finds opening loss D=0.14772 for 2+2 and D=0.17232 for all-white under the common joker-free baseline
+      - Obtains D=19/585 under a separate signal-aware policy by exact enumeration of 180,180 microstates
+      - Attributes the All-White Paradox to the 4/13 white-joker branch that blocks a pooled W0 attack
+      - Plans common joker-inclusive baselines, exact revalidation, full-game modeling, 3+1 analysis, and exploitability work
+    highlights_ko:
+      - 전체 승률이나 GTO가 아닌 첫 공격-첫 반격 한 사이클만 분석
+      - 조커 제외 공통 기준선에서 2+2는 D=0.14772, 흰색 4장은 D=0.17232
+      - 별도의 신호 고려 정책을 180,180개 상태로 정확 열거해 D=19/585 도출
+      - 4/13 확률의 흰 조커 분기가 W0 풀링 공격을 차단하는 ‘흰 4 역설’ 분석
+      - 공통 조커 기준선, 독립 재검증, 전체 게임, 3+1 구성과 피착취성 분석으로 확장 예정
+    methods:
+      - Posterior Probability
+      - Exact Enumeration
+      - Monte Carlo Baseline
+      - Pooling Policy
+    reports:
+      - lang: ko
+        label_ko: 한국어 보고서 v2.0
+        label_en: Korean report v2.0
+        url: /assets/reports/davinci-code-all-white-paradox-ko-v2-0.pdf
+      - lang: en
+        label_ko: 영문 보고서 v2.0
+        label_en: English report v2.0
+        url: /assets/reports/davinci-code-all-white-paradox-en-v2-0.pdf
+
   - slug: indian-poker
     game: Indian Poker
     status_key: completed
@@ -11,6 +53,8 @@ featured:
     title_ko: 확률론적 방법을 활용한 블러핑 고려 인디언 포커 연구
     summary_en: Starting from the ordinary 20-card game, this report builds a two-player AKQ abstraction and uses probability and expected value to examine bluffing, bluff-catching, and deceptive checking.
     summary_ko: 일반적인 20장 게임에서 출발해 2인 A·K·Q 축약모형을 만들고, 확률과 기대값으로 블러프·블러프 캐치·기만적 체크를 분석한 보고서입니다.
+    details_title_en: Key findings
+    details_title_ko: 핵심 내용
     highlights_en:
       - Examines ordinary 20-card Indian Poker before reducing it to an AKQ model
       - Shows how deterministic betting can reveal information and become exploitable
@@ -28,37 +72,40 @@ featured:
       - Probability
       - Mixed Strategy
       - Game Abstraction
-    report_url: /assets/reports/indian-poker-bluffing-strategies-2023.pdf
-    analysis_url:
+    reports:
+      - lang: ko
+        label_ko: 보고서 읽기
+        label_en: Read report
+        url: /assets/reports/indian-poker-bluffing-strategies-2023.pdf
 
 method:
   - number: "01"
     title_en: Observe
     title_ko: 관찰
-    description_en: Identify how deterministic betting leaks private information.
-    description_ko: 결정론적 베팅이 비공개 정보를 드러내는 문제를 관찰합니다.
+    description_en: Start from a concrete strategic intuition or player disagreement.
+    description_ko: 구체적인 전략 직관이나 플레이어 사이의 논쟁에서 출발합니다.
   - number: "02"
     title_en: Formalize
     title_ko: 정식화
-    description_en: Define the rules, actions, payoffs, and assumptions used in the report.
-    description_ko: 보고서에서 사용할 규칙, 행동, 보수와 가정을 정의합니다.
+    description_en: Define rules, information, actions, payoffs, and the exact scope of the claim.
+    description_ko: 규칙, 정보, 행동, 보수와 주장의 정확한 범위를 정의합니다.
   - number: "03"
     title_en: Abstract
     title_ko: 추상화
-    description_en: Reduce the game to a two-player AKQ model without replacement.
-    description_ko: 비복원 추출을 따르는 2인 A·K·Q 모형으로 게임을 축약합니다.
+    description_en: Reduce the game to a tractable subgame while stating every assumption.
+    description_ko: 모든 가정을 명시하며 계산 가능한 하위 게임으로 축약합니다.
   - number: "04"
-    title_en: Derive
-    title_ko: 도출
-    description_en: Use expected-value inequalities to derive mixed bluffing frequencies.
-    description_ko: 기대값 부등식으로 혼합 블러프 빈도를 도출합니다.
+    title_en: Compute
+    title_ko: 계산
+    description_en: Use expected value, exact enumeration, or bounded simulation as the model requires.
+    description_ko: 모형에 맞춰 기대값, 정확 열거 또는 제한된 시뮬레이션을 사용합니다.
   - number: "05"
     title_en: Compare
     title_ko: 비교
-    description_en: Compare first-player bluffing, two-sided bluffing, bluff-catching, and FAKE CHECK.
-    description_ko: 선공 블러프, 양측 블러프, 블러프 캐치와 FAKE CHECK를 비교합니다.
+    description_en: Compare policies only under shared conditions and separate non-comparable models.
+    description_ko: 같은 조건의 정책만 비교하고 직접 비교할 수 없는 모형은 분리합니다.
   - number: "06"
-    title_en: Document
-    title_ko: 기록
-    description_en: State the results together with the model's assumptions and limitations.
-    description_ko: 결과와 함께 모형의 가정과 한계를 명시합니다.
+    title_en: Iterate
+    title_ko: 확장
+    description_en: Publish versioned reports with limitations, reproducibility notes, and the next research questions.
+    description_ko: 한계, 재현성 메모와 다음 질문을 포함한 버전별 보고서로 확장합니다.

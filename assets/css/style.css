@@ -205,7 +205,7 @@ em { color: var(--color-accent); font-style: normal; }
 .research-origin-grid > div > p { max-width: 72ch; margin: 0 0 var(--space-6); color: var(--color-secondary); font-size: 1.02rem; line-height: 1.85; }
 .research-origin-grid blockquote { margin: 0; padding: var(--space-8); border-top: 3px solid var(--color-accent); background: var(--color-subtle); }
 .research-origin-grid blockquote p { margin: 0; font-family: var(--font-display); font-size: clamp(1.35rem, 2.8vw, 2.25rem); letter-spacing: -.03em; line-height: 1.35; }
-.featured-research-grid { display: grid; grid-template-columns: 1fr; gap: var(--space-4); }
+.featured-research-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-4); }
 .featured-research-card, .upcoming-research-card { min-width: 0; border: 1px solid var(--color-border); background: var(--color-background); }
 .featured-research-card { display: flex; min-height: 620px; flex-direction: column; padding: var(--space-8); }
 .research-card-topline { display: flex; min-height: 28px; align-items: center; justify-content: space-between; gap: var(--space-4); color: var(--color-muted); font-size: .68rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
@@ -225,7 +225,7 @@ em { color: var(--color-accent); font-style: normal; }
 .research-card-details > div > ul:not(.tag-list) { margin: 0; padding-left: 1.1em; color: var(--color-muted); font-size: .82rem; }
 .research-card-details > div > ul:not(.tag-list) li + li { margin-top: var(--space-2); }
 .research-card-details .tag-list { margin: 0; }
-.research-card-action { display: flex; min-height: 52px; align-items: end; gap: var(--space-6); margin-top: auto; padding-top: var(--space-6); border-top: 1px solid var(--color-border); color: var(--color-muted); font-size: .78rem; font-weight: 600; }
+.research-card-action { display: flex; min-height: 52px; flex-wrap: wrap; align-items: end; gap: var(--space-2) var(--space-6); margin-top: auto; padding-top: var(--space-6); border-top: 1px solid var(--color-border); color: var(--color-muted); font-size: .78rem; font-weight: 600; }
 .research-card-action .text-link { margin: 0; }
 .upcoming-research-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-4); }
 .upcoming-research-card { display: flex; min-height: 420px; flex-direction: column; padding: var(--space-8); }
