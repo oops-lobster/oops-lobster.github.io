@@ -9,7 +9,7 @@ summary: "하나의 결합 전극을 공유하면서 전력·명령·센서 데�
 summary_en: "A circuit-level analysis of concurrent power, command, and sensor-data transfer over one body-coupled electrode using self-interference cancellation and ground-domain separation."
 summary_ja: "単一の人体結合電極で電力・コマンド・センサーデータを同時伝送するため、自己干渉除去とグラウンド領域分離を組み合わせた回路構成を分析しました。"
 reading_time: 32
-order: 4
+order: 5
 math: true
 tags:
   - Body-Coupled Power
