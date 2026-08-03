@@ -1,4 +1,44 @@
 featured:
+  - slug: mafia-n5-deception-belief
+    primary: true
+    game: Classic Mafia
+    status_key: in-progress
+    status_en: Exact Table Complete · Closure Open
+    status_ko: 정확 정책비교 완료 · 균형 미완료
+    year: 2026
+    version: N=5 · v8
+    type_en: Computational Research Note
+    type_ko: 계산 연구노트
+    title_en: How Does Public Deception Change Collective Belief and Choice?
+    title_ko: 공개적 기만은 집단의 믿음과 결정을 어떻게 바꾸는가?
+    summary_en: A dynamic Bayesian analysis of five-player classic Mafia. Twenty fixed policy pairs—five Mafia policies by four Police disclosure policies—were evaluated by exact finite-horizon recursion, separating first-night structural chance from later claims, posterior beliefs, collective execution choices, and continuation value.
+    summary_ko: 5인 클래식 마피아를 동적 Bayesian 게임으로 분석합니다. 마피아 정책 5개와 경찰 공개정책 4개로 구성된 20개 고정정책쌍을 유한지평 정확 재귀로 계산해, 첫밤의 구조적 우연과 이후 공개주장·사후확률·집단 처형·연속가치를 분리했습니다.
+    details_title_en: Exact results and claim boundary
+    details_title_ko: 정확 계산 결과와 주장 범위
+    highlights_en:
+      - Exactly evaluates 20 fixed policy pairs under one recursive model
+      - Finds a restricted-table saddle at CC-STAY versus P-ALWAYS under neutral tail valuation
+      - Shows that most overall Mafia advantage comes from the first-night population structure rather than later bluffing
+      - Finds strategic silence stronger than active Police impersonation within the evaluated policy set
+      - Leaves global common-belief and Bayesian Nash equilibrium closure explicitly unresolved
+    highlights_ko:
+      - 하나의 재귀모형에서 20개 고정정책쌍을 정확 계산
+      - 중립적 tail 평가에서 제한표 saddle은 CC-STAY 대 P-ALWAYS
+      - 전체 마피아 우위의 대부분이 이후 블러핑보다 첫밤 인원구조에서 발생
+      - 평가된 정책집합에서는 적극적 경찰 사칭보다 전략적 침묵이 강하게 나타남
+      - 전역 common-belief 및 Bayesian Nash equilibrium 폐쇄는 미완료로 명시
+    methods:
+      - Dynamic Bayesian Game
+      - Exact Recursion
+      - Posterior Belief
+      - Policy Comparison
+      - Reproducibility
+    scope_note_en: Exact finite-horizon evaluation of a restricted fixed-policy set. This is not a full-game BNE or a proof of global optimality.
+    scope_note_ko: 제한된 고정정책집합에 대한 정확 유한지평 평가입니다. 전체 게임의 BNE나 전역 최적성을 주장하지 않습니다.
+    availability_en: Research note and interactive visualization in preparation
+    availability_ko: 연구노트 및 인터랙티브 시각화 준비 중
+    reports: []
+
   - slug: davinci-code-all-white-paradox
     game: Da Vinci Code / Coda
     status_key: in-progress
@@ -10,8 +50,8 @@ featured:
     type_ko: 진행 중 기술연구
     title_en: Is an All-White Opening Really Disadvantageous in Two-Player Da Vinci Code?
     title_ko: 다빈치코드 2인전에서 흰색 4장 오프닝은 정말 불리한가?
-    summary_en: An ongoing computational study of initial color composition, pooling signals, joker placement, and first-exchange value. Version 2.0 compares 2+2 and all-white openings under a common baseline and evaluates a separate signal-aware policy over 180,180 exactly enumerated microstates.
-    summary_ko: 초기 색 구성, 풀링 신호, 조커 배치와 첫 공방 가치를 분석하는 진행 중 계산 연구입니다. v2.0에서는 공통 기준선으로 2+2와 흰색 4장을 비교하고, 별도의 신호 고려 정책을 180,180개 미시상태의 정확 열거로 평가했습니다.
+    summary_en: A computational study of information leakage, pooling signals, joker placement, and the value of one opening exchange. The project asks whether a move that looks weak remains weak once the information revealed by the move is included.
+    summary_ko: 정보노출, 풀링 신호, 조커 배치와 첫 공방 한 사이클의 가치를 분석합니다. 직관적으로 약해 보이는 선택이 그 행동이 누설하는 정보까지 포함해도 정말 약한지를 묻습니다.
     details_title_en: Current results and next steps
     details_title_ko: 현재 결과와 확장 방향
     highlights_en:
@@ -29,8 +69,10 @@ featured:
     methods:
       - Posterior Probability
       - Exact Enumeration
-      - Monte Carlo Baseline
       - Pooling Policy
+      - Information Leakage
+    scope_note_en: One opening exchange is analyzed. Results from different baselines are reported separately and are not treated as directly comparable full-game values.
+    scope_note_ko: 첫 공방 한 사이클만 분석합니다. 서로 다른 기준선의 결과는 분리해 제시하며 전체 게임 가치로 직접 비교하지 않습니다.
     reports:
       - lang: ko
         label_ko: 한국어 보고서 v2.0
@@ -51,8 +93,8 @@ featured:
     type_ko: 졸업연구
     title_en: A Study on Indian Poker Bluffing Strategies Using Probabilistic Methods
     title_ko: 확률론적 방법을 활용한 블러핑 고려 인디언 포커 연구
-    summary_en: Starting from the ordinary 20-card game, this report builds a two-player AKQ abstraction and uses probability and expected value to examine bluffing, bluff-catching, and deceptive checking.
-    summary_ko: 일반적인 20장 게임에서 출발해 2인 A·K·Q 축약모형을 만들고, 확률과 기대값으로 블러프·블러프 캐치·기만적 체크를 분석한 보고서입니다.
+    summary_en: Starting from the ordinary 20-card game, this report builds a two-player AKQ abstraction and uses probability and expected value to examine bluffing, bluff-catching, deceptive checking, and the strategic value of randomization.
+    summary_ko: 일반적인 20장 게임에서 출발해 2인 A·K·Q 축약모형을 만들고, 확률과 기대값으로 블러프·블러프 캐치·기만적 체크와 전략적 무작위화의 가치를 분석했습니다.
     details_title_en: Key findings
     details_title_ko: 핵심 내용
     highlights_en:
@@ -72,40 +114,68 @@ featured:
       - Probability
       - Mixed Strategy
       - Game Abstraction
+    scope_note_en: The mixed-strategy conclusions apply to the stated AKQ abstraction, not every rule variant of Indian Poker.
+    scope_note_ko: 혼합전략 결론은 명시한 A·K·Q 축약모형에 적용되며, 인디언 포커의 모든 규칙 변형을 포괄하지 않습니다.
     reports:
       - lang: ko
         label_ko: 보고서 읽기
         label_en: Read report
         url: /assets/reports/indian-poker-bluffing-strategies-2023.pdf
 
+arc:
+  - number: "01"
+    project: Indian Poker
+    title_en: Bluff Frequency
+    title_ko: 기만의 빈도
+    description_en: When should a player bluff, and how often must an opponent bluff-catch to prevent exploitation?
+    description_ko: 언제 얼마나 자주 블러프해야 하며, 상대는 어느 빈도로 블러프를 잡아야 피착취를 막을 수 있는가?
+  - number: "02"
+    project: Da Vinci Code
+    title_en: Information Leakage
+    title_ko: 행동이 누설하는 정보
+    description_en: A locally strong move may be globally weak when the action itself reveals hidden information.
+    description_ko: 당장의 적중률이 높은 행동도 그 행동 자체가 숨은 정보를 누설하면 전체적으로 약해질 수 있습니다.
+  - number: "03"
+    project: Classic Mafia
+    title_en: Collective Belief
+    title_ko: 공개적 기만과 집단의 믿음
+    description_en: Public claims alter posterior beliefs, collective execution choices, and continuation value.
+    description_ko: 공개주장은 사후확률을 바꾸고, 그 믿음은 집단의 처형 선택과 이후 승률을 바꿉니다.
+  - number: "04"
+    project: Next Direction
+    title_en: From Games to Social Systems
+    title_ko: 게임에서 사회적 구조로
+    description_en: The next question is how information access, agenda power, and asymmetric credibility reshape deception outside games.
+    description_ko: 다음 질문은 정보 접근권, 의제 설정권과 비대칭적 신뢰가 현실의 기만을 어떻게 바꾸는가입니다.
+
 method:
   - number: "01"
     title_en: Observe
     title_ko: 관찰
-    description_en: Start from a concrete strategic intuition or player disagreement.
-    description_ko: 구체적인 전략 직관이나 플레이어 사이의 논쟁에서 출발합니다.
+    description_en: Begin with a repeated player intuition—luck, momentum, a tell, or a disputed strategy.
+    description_ko: 운, 기세, 겐또 또는 반복되는 전략 논쟁처럼 플레이어가 실제로 사용하는 직관에서 출발합니다.
   - number: "02"
+    title_en: Decompose
+    title_ko: 분해
+    description_en: Separate chance, private information, strategic randomization, signaling, belief, and collective action.
+    description_ko: 우연성, 사적정보, 전략적 무작위화, 신호, 믿음과 집단행동을 분리합니다.
+  - number: "03"
     title_en: Formalize
     title_ko: 정식화
-    description_en: Define rules, information, actions, payoffs, and the exact scope of the claim.
-    description_ko: 규칙, 정보, 행동, 보수와 주장의 정확한 범위를 정의합니다.
-  - number: "03"
-    title_en: Abstract
-    title_ko: 추상화
-    description_en: Reduce the game to a tractable subgame while stating every assumption.
-    description_ko: 모든 가정을 명시하며 계산 가능한 하위 게임으로 축약합니다.
+    description_en: Define rules, information sets, legal actions, payoffs, and the exact boundary of the claim.
+    description_ko: 규칙, 정보집합, 합법행동, 보수와 주장의 정확한 경계를 정의합니다.
   - number: "04"
     title_en: Compute
     title_ko: 계산
-    description_en: Use expected value, exact enumeration, or bounded simulation as the model requires.
-    description_ko: 모형에 맞춰 기대값, 정확 열거 또는 제한된 시뮬레이션을 사용합니다.
+    description_en: Use expected value, exact enumeration, dynamic recursion, or bounded simulation as the model requires.
+    description_ko: 모형에 따라 기대값, 정확 열거, 동적 재귀 또는 오차가 명시된 시뮬레이션을 사용합니다.
   - number: "05"
-    title_en: Compare
-    title_ko: 비교
-    description_en: Compare policies only under shared conditions and separate non-comparable models.
-    description_ko: 같은 조건의 정책만 비교하고 직접 비교할 수 없는 모형은 분리합니다.
+    title_en: Stress-test
+    title_ko: 검증
+    description_en: Compare policies under shared assumptions and report tail mass, residuals, reproducibility, and failure to close.
+    description_ko: 같은 가정 아래 정책을 비교하고 tail, 잔차, 재현성과 폐쇄하지 못한 지점을 함께 공개합니다.
   - number: "06"
-    title_en: Iterate
+    title_en: Translate
     title_ko: 확장
-    description_en: Publish versioned reports with limitations, reproducibility notes, and the next research questions.
-    description_ko: 한계, 재현성 메모와 다음 질문을 포함한 버전별 보고서로 확장합니다.
+    description_en: Ask which mechanisms survive when the model moves from games to organizations, bargaining, and power.
+    description_ko: 게임에서 발견한 메커니즘이 조직, 협상과 권력구조로 옮겨갈 때 무엇이 남는지 질문합니다.
