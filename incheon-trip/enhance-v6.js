@@ -32,5 +32,5 @@
   mapBtn.addEventListener("click",()=>{if(current.place&&typeof focusStop==="function")focusStop(current.place,false)});
   update();setInterval(update,30000);
 
-  document.querySelectorAll(".backup-filter button").forEach(btn=>{btn.addEventListener("click",()=>{const f=btn.dataset.filter;document.querySelectorAll(".backup-card").forEach(card=>{const tags=(card.dataset.tags||"").split(/\s+/);card.hidden=f!=="all"&&!tags.includes(f);card.classList.remove("dim");});const restaurant=document.getElementById("restaurants");if(restaurant)restaurant.hidden=f!=="all"&&f!=="food"&&f!=="yeongjong";},true);});
+  document.querySelectorAll(".backup-filter button").forEach(btn=>{btn.addEventListener("click",()=>{const f=btn.dataset.filter;document.querySelectorAll(".backup-card").forEach(card=>{const tags=(card.dataset.tags||"").split(/\s+/);card.hidden=f!=="all"&&!tags.includes(f);card.classList.remove("dim");});const restaurant=document.getElementById("restaurants");if(restaurant){const any=[...restaurant.querySelectorAll(".restaurant-card")].some(card=>!card.hidden);restaurant.hidden=!any;}},true);});
 })();
