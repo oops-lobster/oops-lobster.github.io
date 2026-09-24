@@ -7,11 +7,11 @@
     {s:630,e:650,title:"민성이 면회",sub:"10:30–10:50 · 고정 일정",sel:"#s-visit",place:"hospital",fixed:true,nextAt:650},
     {s:650,e:675,title:"낮잠 여부 확인",sub:"차에서 잠들면 점심보다 낮잠 우선",sel:"#s-nap",place:null,alt:"#restaurants",nextAt:675},
     {s:675,e:720,title:"점심 · 연경",sub:"기본안 기준 · 나윤이가 자면 뒤로 미룸",sel:"#s-lunch",place:"lunch",alt:"#restaurants",nextAt:720},
-    {s:720,e:800,title:"신포시장 / 낮잠 유동",sub:"닭강정 대기 30분 컷 · 낮잠이 더 중요",sel:"#s-sinpo",place:"sinpo",alt:"#backup",nextAt:800},
-    {s:800,e:930,title:"월미도 · 뽀로로",sub:"13:20–15:30 전후 · 낮잠에 따라 입장 유동",sel:"#s-pororo",place:"pororo",alt:"#backup",nextAt:930},
-    {s:930,e:990,title:"영종도로 이동",sub:"16:10–16:30 하나로마트 장보기",sel:"#s-hanaro",place:"hanaro",nextAt:990},
+    {s:720,e:780,title:"신포시장 / 낮잠 유동",sub:"닭강정 대기 30분 컷 · 낮잠이 더 중요",sel:"#s-sinpo",place:"sinpo",alt:"#backup",nextAt:780},
+    {s:780,e:930,title:"1안 · 인스파이어",sub:"영종도 이동 후 60–90분 · 낮잠 우선",sel:"#s-activity",place:"inspire",alt:"#backup",nextAt:930},
+    {s:930,e:990,title:"하나로마트로 이동·장보기",sub:"16:10–16:30 하나로마트 장보기",sel:"#s-hanaro",place:"hanaro",nextAt:990},
     {s:990,e:1020,title:"아빛스테이 체크인",sub:"짐 정리 · 나윤이 잠깐 휴식",sel:"#s-stay",place:"stay",nextAt:1020},
-    {s:1020,e:1080,title:"저녁 · 펜션 BBQ",sub:"날씨가 나쁘면 식당 대안으로 전환",sel:"#s-bbq",place:"stay",alt:"#restaurants",nextAt:1080},
+    {s:1020,e:1080,title:"저녁 · 펜션 BBQ",sub:"비가 와도 LPG BBQ · 객실 고기 조리 금지",sel:"#s-bbq",place:"stay",alt:"#restaurants",nextAt:1080},
     {s:1080,e:1110,title:"마시안해변 일몰",sub:"선택 일정 · 피곤하면 바로 숙소",sel:"#s-masian",place:"masian",alt:"#backup",nextAt:1110},
     {s:1110,e:1200,title:"나윤이 취침 루틴",sub:"씻기 → 취침 준비 → 20시 전후 육퇴",sel:"#s-night",place:null,nextAt:1200},
     {s:1200,e:1440,title:"육퇴",sub:"닭강정 · 회 등 야식",sel:"#s-night",place:null,nextAt:null}
@@ -129,7 +129,14 @@
     if (current.alt === "#restaurants") openRestaurants(meal);
     else { setSituation("all"); document.querySelector(current.alt)?.scrollIntoView({behavior:"smooth"}); }
   });
-  updateToday();
+  function syncPlan(){
+    day1[6].place=DAY1[3];day1[6].title=(activePlan==="inspire"?"1안 · ":"2안 · ")+PLACES[DAY1[3]].name;
+    day1[6].sub=activePlan==="inspire"?"영종도 이동 후 60–90분 · 퍼레이드는 시간이 맞을 때만":"영종도 이동 후 카페 45–60분 · 추석 영업 매장 확인";
+    if(mode==="day1"){stepSelect.options[6].textContent=fmt(day1[6].s)+" · "+day1[6].title}
+    updateToday();
+  }
+  window.addEventListener("trip-plan-change",syncPlan);
+  syncPlan();
   setInterval(updateToday, 30000);
   document.addEventListener("visibilitychange", () => { if (!document.hidden) updateToday(); });
 
@@ -142,7 +149,7 @@
     ["점심 대기 길 때", "미미진", "딤섬 · 중식", "r-mimijin"],
     ["유니짜장이 당길 때", "신승반점", "주말 대기는 감안", "r-sinseung"],
     ["가벼운 점심", "경인면옥", "신포 · 냉면", "r-gyeongin"],
-    ["BBQ가 어려울 때", "우이며녹", "백합칼국수 · 영종도", "r-uimyeonok"],
+    ["저녁을 바꿀 때", "우이며녹", "백합칼국수 · 영종도", "r-uimyeonok"],
     ["고기 저녁", "바른찜갈비", "토요일 저녁 후보", "r-galbi"],
     ["2일차 아침", "보경", "갈비탕 · 순대국", "r-bogyung"]
   ];
