@@ -9,20 +9,17 @@
     {s:675,e:720,title:"점심 · 연경",sub:"기본안 기준 · 나윤이가 자면 뒤로 미룸",sel:"#s-lunch",place:"lunch",alt:"#restaurants",nextAt:720},
     {s:720,e:780,title:"신포시장 / 낮잠 유동",sub:"닭강정 대기 30분 컷 · 낮잠이 더 중요",sel:"#s-sinpo",place:"sinpo",alt:"#backup",nextAt:780},
     {s:780,e:930,title:"1안 · 인스파이어",sub:"영종도 이동 후 60–90분 · 낮잠 우선",sel:"#s-activity",place:"inspire",alt:"#backup",nextAt:930},
-    {s:930,e:990,title:"하나로마트로 이동·장보기",sub:"16:10–16:30 하나로마트 장보기",sel:"#s-hanaro",place:"hanaro",nextAt:990},
-    {s:990,e:1020,title:"아빛스테이 체크인",sub:"짐 정리 · 나윤이 잠깐 휴식",sel:"#s-stay",place:"stay",nextAt:1020},
+    {s:930,e:990,title:"롯데마트 영종도점 장보기",sub:"인스파이어 → 롯데마트 → 숙소 · 이동·주차 여유",sel:"#s-hanaro",place:"hanaro",nextAt:990},
+    {s:990,e:1020,title:"아빛스테이 체크인",sub:"입실 후 물 받기 1.5–2시간 · 자쿠지·BBQ 순서 유동",sel:"#s-stay",place:"stay",nextAt:1020},
     {s:1020,e:1080,title:"저녁 · 펜션 BBQ",sub:"비가 와도 LPG BBQ · 객실 고기 조리 금지",sel:"#s-bbq",place:"stay",alt:"#restaurants",nextAt:1080},
     {s:1080,e:1110,title:"마시안해변 일몰",sub:"선택 일정 · 피곤하면 바로 숙소",sel:"#s-masian",place:"masian",alt:"#backup",nextAt:1110},
     {s:1110,e:1200,title:"나윤이 취침 루틴",sub:"씻기 → 취침 준비 → 20시 전후 육퇴",sel:"#s-night",place:null,nextAt:1200},
-    {s:1200,e:1440,title:"육퇴",sub:"닭강정 · 회 등 야식",sel:"#s-night",place:null,nextAt:null}
+    {s:1200,e:1440,title:"육퇴",sub:"회타운 회 포장 / 배달 옵션",sel:"#s-night",place:null,nextAt:null}
   ];
   const day2=[
-    {s:0,e:540,title:"2일차 아침",sub:"09:00 장모님집에서 아침",sel:"#day2",place:null,nextAt:540},
-    {s:540,e:600,title:"아침 · 장모님집",sub:"10:00에는 요양원으로 출발",sel:"#s-jangmo",place:"jangmo",alt:"#restaurants",nextAt:600},
-    {s:600,e:644,title:"부추꽃요양원으로 이동",sub:"10:44 면회 시작 · 시간 여유 확보",sel:"#s-care-move",place:"care",nextAt:644},
-    {s:644,e:690,title:"외할머니 면회",sub:"10:44–11:30 · 2일차 절대 고정",sel:"#s-care",place:"care",fixed:true,nextAt:690},
-    {s:690,e:730,title:"집으로 복귀",sub:"11:30–12:10",sel:"#s-home",place:null,nextAt:730},
-    {s:730,e:1440,title:"여행 마무리",sub:"고정 일정 완료",sel:"#s-home",place:null,nextAt:null}
+    {s:0,e:540,title:"2일차 아침 준비",sub:"병원 면회시간 확인 후 전체 시간 조정",sel:"#day2",place:null,nextAt:540},
+    {s:540,e:600,title:"아침 · 장모님집 / 보경",sub:"09시 전후 임시 계획 · 면회시간에 따라 조정",sel:"#s-jangmo",place:"jangmo",alt:"#restaurants",nextAt:600},
+    {s:600,e:1440,title:"뉴고려병원 병문안 · 시간 미정",sub:"면회시간·이동 확인 → 병문안 → 큰이모와 점심 또는 귀가",sel:"#s-care-move",place:"care",nextAt:null}
   ];
   const $ = id => document.getElementById(id);
   const today = $("today");
@@ -84,7 +81,7 @@
     preview.hidden = mode === "auto";
     if (mode === "auto" && n.date < "2026-09-26") {
       const d = Math.round((Date.parse("2026-09-26T00:00:00Z") - Date.parse(n.date + "T00:00:00Z")) / 86400000);
-      paint({title: `여행까지 D-${d}`, sub: "첫날 09:20 출발 · 면회 후에는 나윤이 낮잠을 먼저 살펴요.", sel:"#day1", alt:"#backup"},
+      paint({title: `여행까지 D-${d}`, sub: "첫날 햄버거 픽업을 고려해 출발 · 면회 후에는 나윤이 낮잠을 먼저 살펴요.", sel:"#day1", alt:"#backup"},
         "9월 26–27일 · 여행 준비", "민성이 면회", "9/26 10:30–10:50 · 고정", 0,
         "여행 당일에는 한국 시각에 맞춰 현재·다음 일정을 보여줘요.");
       $("todayScheduleBtn").textContent = "DAY 1 보기";
@@ -99,11 +96,11 @@
     const mins = mode === "auto" ? n.mins : entries[previewIndex].s;
     const index = mode === "auto" ? entries.findIndex(e => mins >= e.s && mins < e.e) : previewIndex;
     const entry = entries[index], next = entries[index + 1];
-    const timing = next ? fmt(next.s) + (mode === "auto" ? ` · ${until(next.s - mins)}` : " · 기본안") : "";
+    const timing = next && !isDay2 ? fmt(next.s) + (mode === "auto" ? ` · ${until(next.s - mins)}` : " · 기본안") : "";
     const start = isDay2 ? 540 : 560, end = isDay2 ? 730 : 1200;
     paint(entry, `${mode === "auto" ? "현재" : "미리보기"} · DAY ${isDay2 ? 2 : 1}${entry.fixed ? " · 고정" : ""}`,
-      next?.title, timing, (mins-start)/(end-start)*100,
-      entry.fixed ? "면회 시간은 고정이에요." : "기본 시간표 기준 · 낮잠 이후 일정은 유동적이에요.");
+      next?.title, timing, isDay2 ? 0 : (mins-start)/(end-start)*100,
+      isDay2 ? "둘째 날 시간은 임시 계획 · 새 병원 면회시간 확인 후 조정" : entry.fixed ? "면회 시간은 고정이에요." : "기본 시간표 기준 · 낮잠 이후 일정은 유동적이에요.");
   }
   document.querySelectorAll("[data-today-mode]").forEach(button => button.addEventListener("click", () => {
     mode = button.dataset.todayMode;
@@ -131,7 +128,7 @@
   });
   function syncPlan(){
     day1[6].place=DAY1[3];day1[6].title=(activePlan==="inspire"?"1안 · ":"2안 · ")+PLACES[DAY1[3]].name;
-    day1[6].sub=activePlan==="inspire"?"영종도 이동 후 60–90분 · 퍼레이드는 시간이 맞을 때만":"영종도 이동 후 카페 45–60분 · 추석 영업 매장 확인";
+    day1[6].sub=activePlan==="inspire"?"영종도 이동 후 60–90분 · 퍼레이드는 시간이 맞을 때만":"영종도 이동 후 카페 45–60분 · 9/26 영업 확인";
     if(mode==="day1"){stepSelect.options[6].textContent=fmt(day1[6].s)+" · "+day1[6].title}
     updateToday();
   }
