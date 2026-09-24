@@ -14,7 +14,7 @@
     {s:1020,e:1080,title:"저녁 · 펜션 BBQ",sub:"비가 와도 LPG BBQ · 객실 고기 조리 금지",sel:"#s-bbq",place:"stay",alt:"#restaurants",nextAt:1080},
     {s:1080,e:1110,title:"마시안해변 일몰",sub:"선택 일정 · 피곤하면 바로 숙소",sel:"#s-masian",place:"masian",alt:"#backup",nextAt:1110},
     {s:1110,e:1200,title:"나윤이 취침 루틴",sub:"씻기 → 취침 준비 → 20시 전후 육퇴",sel:"#s-night",place:null,nextAt:1200},
-    {s:1200,e:1440,title:"육퇴",sub:"회타운 회 포장 / 배달 옵션",sel:"#s-night",place:null,nextAt:null}
+    {s:1200,e:1440,title:"육퇴",sub:"어부신광호 / 어촌계 직판장 회 포장 + 배달 옵션",sel:"#s-night",place:null,nextAt:null}
   ];
   const day2=[
     {s:0,e:540,title:"2일차 아침 준비",sub:"병원 면회시간 확인 후 전체 시간 조정",sel:"#day2",place:null,nextAt:540},
