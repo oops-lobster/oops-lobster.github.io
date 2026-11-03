@@ -18,9 +18,8 @@ tags:
 ---
 
 > 논문: **Body-Coupled Power Transmission and Energy Harvesting**  
-> 저자: Jiamin Li, Yilong Dong, Jeong Hoan Park, Jerald Yoo  
 > 핵심 연결 논문: **SkinECG: An orthogonal remote powering wearable skin-like sensor**  
-> 작성 목적: 유담 교수님 연구 흐름 이해 및 SkinECG 후속 아이디어 정리  
+> 작성 목적: 관련 연구 흐름 이해 및 SkinECG 후속 아이디어 정리
 > 작성 방식: 논문 내용 이해 + 생성형 AI 인공지능을 활용한 이해(검토필요)
 
 ---
@@ -450,7 +449,7 @@ OPV 기반 O-EHN
 
 ---
 
-## G. 교수님께 질문할 만한 포인트
+## G. 후속 연구를 위한 질문
 
 1. SkinECG의 QRST 중심 전송은 전력 효율 측면에서는 매우 합리적이지만, 임상적으로 waveform morphology가 필요한 상황에서는 어떤 정보 손실이 문제가 될 수 있을까?
 

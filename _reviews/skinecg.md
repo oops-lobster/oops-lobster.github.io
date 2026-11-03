@@ -19,7 +19,6 @@ tags:
 
 ## 논문 학습노트 및 질문 정리
 
-> Tan, Joanne Si Ying, Zhuoyue Li, Sixing Xiong, Shinyoung Lee, Jia Yi Fong, Tao Tang, Jiamin Li, Zhongqi Li, Kyungsoo Park, Donghan Kim, Junwei Feng, Gwangjin Kim, Lian Zhang, Astrid Rusly, Benjamin Ho Yin Lee, Kian Ann Ng, Kenjiro Fukuda, Takao Someya, and Jerald Yoo.  
 > “SkinECG: An orthogonal remote powering wearable skin-like sensor.” *Science Advances* 12, no. 18 (2026): eaec9803.  
 > DOI: 10.1126/sciadv.aec9803
 
@@ -32,7 +31,6 @@ tags:
 - **연도**: 2026
 - **논문 번호**: eaec9803
 - **DOI**: 10.1126/sciadv.aec9803
-- **교신저자**: Jerald Yoo
 - **핵심 키워드**  
   - SkinECG  
   - wearable ECG  

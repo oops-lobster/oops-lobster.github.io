@@ -35,8 +35,6 @@ tags:
 | 항목 | 내용 |
 |---|---|
 | 논문 | Concurrent Body-Coupled Powering and Communication ICs With a Single Electrode |
-| 저자 | Jiamin Li, Yilong Dong, Longyang Lin, Joanne Si Ying Tan, Jia Yi Fong, Jerald Yoo |
-| 교신저자 | Jerald Yoo |
 | 학술지 | IEEE Journal of Solid-State Circuits |
 | 연도 | 2024 |
 | DOI | 10.1109/JSSC.2024.3353386 |
@@ -951,7 +949,7 @@ GNDITM은 단순 timing state가 아니라 intermediate voltage-reference domain
 
 ---
 
-## 18. 유담 교수님께 확인할 질문
+## 18. 후속 연구를 위해 확인할 질문
 
 1. Adaptive SI-C가 실제 wearable motion에서 변하는 \(C_{\mathrm{ENV}}\)를 추적하기에 충분한 adaptation speed를 갖는가?
 2. 2024 architecture를 SkinECG에 적용할 때, strong BCP carrier가 ECG analog front-end를 포화시키지 않도록 어떤 isolation·filtering이 추가로 필요한가?
