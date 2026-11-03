@@ -31,11 +31,11 @@ tags:
 **논문명**
 *A 16-Channel Patient-Specific Seizure Onset and Termination Detection SoC With Impedance-Adaptive Transcranial Electrical Stimulator*
 
-**저자**
-Muhammad Awais Bin Altaf, Chen Zhang, Jerald Yoo
-
 **학술지**
 IEEE Journal of Solid-State Circuits, 2015
+
+**DOI**
+10.1109/JSSC.2015.2482498
 
 **핵심 키워드**
 16-channel EEG, patient-specific seizure detection, seizure termination, DCCR-AFE, FTDM, D2A-LSVM, digital hysteresis, impedance-adaptive tES, closed-loop SoC
@@ -911,4 +911,4 @@ BCP 전력
 
 ### Reference
 
-Altaf, M. A. B., Zhang, C., & Yoo, J. (2015). A 16-Channel Patient-Specific Seizure Onset and Termination Detection SoC With Impedance-Adaptive Transcranial Electrical Stimulator. *IEEE Journal of Solid-State Circuits, 50*(11), 2728–2740. https://doi.org/10.1109/JSSC.2015.2482498
+*A 16-Channel Patient-Specific Seizure Onset and Termination Detection SoC With Impedance-Adaptive Transcranial Electrical Stimulator.* (2015). *IEEE Journal of Solid-State Circuits, 50*(11), 2728–2740. https://doi.org/10.1109/JSSC.2015.2482498

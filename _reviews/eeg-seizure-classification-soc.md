@@ -23,7 +23,7 @@ tags:
 > 두피 EEG를 최대 8채널로 연속 측정하고, 최근 약 6초의 주파수·공간·시간 특징을 칩 내부에서 계산해 환자별 선형 SVM으로 발작을 판정한 뒤, 발작이 검출되면 측정 대역폭을 30 Hz에서 100 Hz로 넓혀 원시 EEG를 64 KB SRAM에 기록하는 2013년 JSSC 통합 SoC 논문이다.
 
 > **이 논문의 핵심 의미**
-> 이 연구의 가장 큰 기여는 특정 증폭기나 분류기 하나가 아니라, **전극 입력 → 저잡음 AFE → ADC → 주파수 특징 추출 → 환자별 분류 → 원시 EEG 기록**을 하나의 5 mm × 5 mm 칩 안에 통합했다는 데 있다. 이후 유담 교수님 연구의 `발작 감지 → 폐루프 자극 → one-shot/online tuning → patient-independent zero-shot` 계보를 이해하는 뿌리 논문이다.
+> 이 연구의 가장 큰 기여는 특정 증폭기나 분류기 하나가 아니라, **전극 입력 → 저잡음 AFE → ADC → 주파수 특징 추출 → 환자별 분류 → 원시 EEG 기록**을 하나의 5 mm × 5 mm 칩 안에 통합했다는 데 있다. 이후 `발작 감지 → 폐루프 자극 → one-shot/online tuning → patient-independent zero-shot`으로 이어지는 연구 계보를 이해하는 뿌리 논문이다.
 
 > **해석 시 주의**
 > 최대 8채널을 지원하지만 실제 사람에게 전극부터 분류기까지 전체 경로를 검증한 실험은 `Fp1–F3`, `Fp2–F4`의 2채널 rapid-eye-blink 시험이었다. 실제 발작 성능은 CHB–MIT의 이미 기록된 디지털 EEG를 프로세서 입력으로 넣어 검증했다. 따라서 **실제 간질 환자의 일상 장기 착용 성능을 입증한 논문은 아니다.**
@@ -35,7 +35,6 @@ tags:
 | 항목 | 내용 |
 |---|---|
 | 논문 | An 8-Channel Scalable EEG Acquisition SoC With Patient-Specific Seizure Classification and Recording Processor |
-| 저자 | Jerald Yoo, Long Yan, Dina El-Damak, Muhammad Awais Bin Altaf, Ali H. Shoeb, Anantha P. Chandrakasan |
 | 학술지 | IEEE Journal of Solid-State Circuits |
 | 출판 | 2013년 1월, Vol. 48, No. 1, pp. 214–228 |
 | DOI | 10.1109/JSSC.2012.2221220 |
@@ -1285,7 +1284,7 @@ seizure status → bandwidth
 
 ---
 
-## 21. 유담 교수님께 확인할 질문
+## 21. 후속 연구를 위해 확인할 질문
 
 1. 이 연구에서 8채널의 위치는 어떤 임상적·알고리즘적 기준으로 정했는가?
 2. 환자별 electrode/channel selection까지 통합하려는 시도가 당시에도 있었는가?
